@@ -1,0 +1,15 @@
+1- ALTER TABLE departamento ADD tiene_Empleado boolean DEFAULT false;
+2- ALTER TABLE departamento ALTER tiene_Empleado DROP DEFAULT;
+3- ALTER TABLE departamento DROP COLUMN tiene_Empleado; 
+4- ALTER TABLE departamento ADD numempleados int(7);
+5- ALTER TABLE departamento ALTER numempleados SET DEFAULT 0;
+6- UPDATE empleado SET SALARIO = SALARIO*0.10 WHERE ND = 5;
+7- UPDATE empleado SET SALARIO = SALARIO*0.10 WHERE ND = (SELECT NUMEROD FROM departamento WHERE NOMBRED = 'Investigaci?n');
+8-
+9- 
+10- INSERT INTO empleado(NOMBRE,NSS) VALUES ('john', '838667505');
+11- ALTER TABLE empleado ADD CONSTRAINT nom UNIQUE (NOMBRE);
+12- ALTER TABLE empleado DROP CONSTRAINT nom; 
+13- DELETE FROM PARENTESCO WHERE NSSE = (SELECT NSS FROM empleado WHERE NOMBRE = 'john');
+14- INSERT INTO DEPARTAMENTO VALUES ('Compras', 9);
+15-
